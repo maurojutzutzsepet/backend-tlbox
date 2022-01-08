@@ -1,0 +1,6 @@
+parameters:
+  text:
+    in: query
+    name: text
+    description: texto para validar
+    type: string
