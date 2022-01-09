@@ -3,9 +3,6 @@ const json = require("./swagger.util");
 
 const cfg = require("../../cf");
 
-// const environments = require("../../environments.js");
-// environments.verifyEnvironment();
-
 const name = cfg.projectName;
 const port = cfg.port;
 
@@ -26,8 +23,7 @@ const swaggerDefinition = {
 const options = {
   // Importando swaggerDefinitions
   swaggerDefinition,
-  // Path de los lugares donde serán documentadas las API (routes)
-  // Tenga en cuenta que esta ruta es relativa al directorio actual desde el que se ejecuta Node.js, no la aplicación en sí.
+
   apis: [
     "./routes/*.js",
     "./swagger/definitions/*.definitions.yaml",

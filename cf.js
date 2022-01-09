@@ -1,3 +1,4 @@
+//variables generales
 module.exports = {
   projectName: "2022-backend-base-toolbox",
   // ------------- CONSTANTES  --------------
