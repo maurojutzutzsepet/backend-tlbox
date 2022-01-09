@@ -1,6 +1,6 @@
 var express = require("express");
 var cf = require("../cf");
-
+//importar controladores
 const validationstxt = require("../controllers/text.controller");
 
 var app = express.Router();
@@ -17,9 +17,9 @@ app.get("/", function (req, res, next) {
  * @swagger
  * /iecho:
  *   get:
- *     summary: "Listado de usuarios"
- *     description: Devuelve resultados de lista de usuarios registrados.
- *     tags: [Users]
+ *     summary: "envio de palabra"
+ *     description: Devuelve una palabra al reves y validacion palindromo
+ *     tags: [Text validation]
  *     security:
  *         - Bearer: []
  *     parameters:
@@ -32,10 +32,6 @@ app.get("/", function (req, res, next) {
  *       400:
  *         description: Error en la validación o Error en los Headers.
  */
-app.get(
-  "/iecho",
-  //oauthController.verify,
-  validationstxt.textValidation
-);
+app.get("/iecho", validationstxt.textValidation);
 
 module.exports = app;
